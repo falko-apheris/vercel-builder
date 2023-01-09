@@ -37,12 +37,11 @@ Then, simply create a `vercel.json` file at the root of your project:
 ```json
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "nuxt.config.js",
-      "use": "@nuxtjs/vercel-builder"
-    }
-  ]
+  "functions": {
+		"nuxt.config.js": {
+			"runtime": "@nuxtjs/vercel-builder"
+		}
+	}
 }
 ```
 
